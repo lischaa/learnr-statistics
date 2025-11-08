@@ -1,0 +1,150 @@
+---
+title: "Hello, Tutorial!"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+library(VennDiagram)
+library(grid)
+```
+
+
+```{r, echo=FALSE, results='asis'}
+	library(shiny)
+	wellPanel(
+		strong("Notiz:"), "Die symmetrische Differenz 𝐴 Δ 𝐵 von zwei Mengen ist definiert als die Menge aller Elemente, die jeweils in einer der beiden, aber nicht in beiden Mengen liegen."
+	)
+```
+
+# Aufgabe 1 {#aufgabe1}
+
+```{r, echo=FALSE, results='asis'}
+	library(shiny)
+	wellPanel(
+		"Überlegen Sie anhand eines Venn-Diagramms:",
+	)
+```
+
+
+
+
+```{r exercise1_a, echo=FALSE}
+question("(a) Welche Elemente gehören zur symmetrischen Differenz A Δ B ?",
+	answer("23"),
+	answer("1", correct = TRUE)
+)
+```
+
+```{r exercise1_b, echo=FALSE}
+question("(b) Die symmetrische Differenz lässt sich $\\sigma$ auch ausdrücken 
+	als A Δ B = (A\\B) ∪ (B\\A)",
+	answer("23"),
+	answer("1", correct = TRUE)
+)
+```
+
+```{r exercise1_c, echo=FALSE}
+question("(c) A Δ B = B heißt dasselbe wie B ⊂ A",
+	answer("23"),
+	answer("3", correct = TRUE)
+)
+```
+
+
+# Aufgabe 2 {#aufgabe2}
+
+
+```{r, echo=FALSE, results='asis'}
+	library(shiny)
+	wellPanel(
+		"Bei einem Spiel mit Münzen wird eine Münze 4 Mal hintereinander geworfen. Dabei wird jedes Mal notiert, ob
+		Wappen (W) oder Zahl (Z) gefallen ist."
+	)
+```
+
+
+```{r exercise2_a, echo=FALSE}
+question("(a) Geben Sie eine geeignete Menge $\\Omega$ an, in der alle
+	möglichen Ergebnisse liegen. Wie viel Elemente
+	enthält die Menge $\\Omega$?",
+	answer("23"),
+	answer("1", correct = TRUE)
+)
+```
+<button onclick="window.location.href='exercise1.Rmd'">
+  ← Zurück zu Aufgabe 1
+</button>
+
+```{r exercise2_b, echo=FALSE}
+question("(b) Geben Sie für das Ereignis A: „es ist genau zweimal
+	Wappen gefallen“ die Ereignismenge an.",
+	answer("23"),
+	answer("1", correct = TRUE)
+)
+```
+
+```{r exercise2_c, echo=FALSE}
+question("(c) Geben Sie für das Ereignis B: „in den ersten beiden Würfen ist Wappen gefallen“ die Ereignismenge an.",
+	answer("23"),
+	answer("333", correct = TRUE)
+)
+```
+
+```{r exercise2_d, echo=FALSE}
+question("(d) Bestimmen Sie A $\\cup$ B",
+	answer("23"),
+	answer("3", correct = TRUE)
+)
+```
+
+
+
+# Augabe 3 {#aufgabe3}
+
+
+```{r, echo=FALSE, results='asis'}
+	library(shiny)
+	wellPanel(
+		"Bestimmen Sie die Mächtigkeit folgender Mengen:"
+	)
+```
+
+```{r exercise3_1, echo=FALSE}
+	question_numeric(
+	"(a) A = {1, 2, 3}",
+	# Die korrekte Antwort
+	answer(3,
+		correct = TRUE),
+	answer(4,
+		message = "Leider falsch. Die gesuchte Zahl ist zu hoch."),
+	answer(2,
+	message = "Leider falsch. Die gesuchte Zahl ist zu niedrig.")
+)
+```
+```{r exercise3_2, echo=FALSE}
+	question_numeric(
+	"(b) B = {a, b, c}",
+	# Die korrekte Antwort
+	answer(3,
+		correct = TRUE),
+	answer(4,
+		message = "Leider falsch. Die gesuchte Zahl ist zu hoch."),
+	answer(2,
+	message = "Leider falsch. Die gesuchte Zahl ist zu niedrig.")
+)
+```
+
+```{r exercise3_3, echo=FALSE}
+	question_numeric(
+	"(c) C = A ∪ B ∪ {1, . . . , 11}",
+	# Die korrekte Antwort
+	answer(11,
+		correct = TRUE),
+	answer(4,
+		message = "Leider falsch. Die gesuchte Zahl ist zu hoch."),
+	answer(2,
+	message = "Leider falsch. Die gesuchte Zahl ist zu niedrig.")
+)
+```
