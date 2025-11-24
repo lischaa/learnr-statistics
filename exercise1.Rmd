@@ -1,7 +1,13 @@
 ---
-title: "Hello, Tutorial!"
-output: learnr::tutorial
+title: "Statistik Vorkurs"
+output:
+  learnr::tutorial:
+    progressive: true
+    allow_skip: true
 runtime: shiny_prerendered
+description: >
+  Learn how to set up R and RStudio on your machine. We will also demonstrate
+  how to install R packages from CRAN, and install the tidyverse package.
 ---
 
 ```{r setup, include=FALSE}
@@ -10,14 +16,13 @@ library(VennDiagram)
 library(grid)
 ```
 
+## Aufgabe 1
 ```{r, echo=FALSE, results='asis'}
 	library(shiny)
 	wellPanel(
 		strong("Notiz:"), "Die symmetrische Differenz 𝐴 Δ 𝐵 von zwei Mengen ist definiert als die Menge aller Elemente, die jeweils in einer der beiden, aber nicht in beiden Mengen liegen."
 	)
 ```
-
-# Aufgabe 1 {#aufgabe1}
 
 ```{r, echo=FALSE, results='asis'}
 	library(shiny)
@@ -48,7 +53,7 @@ question("(c) A $\\cap$ B = B heißt dasselbe wie B $\\subset$ A",
 )
 ```
 
-# Aufgabe 2 {#aufgabe2}
+## Aufgabe 2 
 
 ```{r, echo=FALSE, results='asis'}
 	library(shiny)
@@ -126,7 +131,7 @@ Die Schnittmenge zwischen beiden Ereignissen enthält nur ein Ergebnis
 A $\cap$ B = {(W, W, Z, Z)}.
 </details> 
 
-# Augabe 3 {#aufgabe3}
+## Augabe 3
 
 ```{r, echo=FALSE, results='asis'}
 	library(shiny)
@@ -170,7 +175,7 @@ A $\cap$ B = {(W, W, Z, Z)}.
 	)
 ```
 
-# Aufgabe 4 {#aufgabe4}
+## Aufgabe 4
 
 ```{r, echo=FALSE, results='asis'}
 	library(shiny)
